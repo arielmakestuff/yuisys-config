@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Mounting /boot as rw ...
+When = PreTransaction
+Exec = /usr/bin/mount -o remount,rw /boot
